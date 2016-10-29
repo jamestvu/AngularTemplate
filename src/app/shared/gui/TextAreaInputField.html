@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label class="control-label" style="float:left" data-ng-style="{width: labelWidth}">{{ label }}</label>
+            <textarea msd-elastic="\n\n" data-ng-model="model" data-ng-disabled="disabled" ng-bind="model" data-ng-blur="onblur()" class="form-control" data-ng-style="{'min-height': boxHeight, 'width': boxWidth + '%'}"></textarea>
+            <span class="help-block">{{ validationMessage }}</span>
+        </div>
+    </div>
+    <!--<div class="col-xs-6">
+        <div style="padding-top: 1.2em;"></div>
+        <p class="help-block" style="height: 1em;"> {{ helpMessage }}</p>
+    </div>-->
+</div>

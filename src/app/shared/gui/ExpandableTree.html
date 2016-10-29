@@ -1,0 +1,19 @@
+<ul class="jg-tree">
+    <li data-ng-repeat="node in node[childrenProperty]" data-ng-init="initNodes(node, childNode)">
+        <div class="jg-tree-item jg-tree-animation" data-ng-class="{'jg-tree-node-selected':isSelected(node)}">
+            <a class="btn btn-xs btn-link text-center"
+               data-ng-click="toggleCollapse(node)"
+               data-ng-if="node[childrenProperty]">
+                <span data-ng-if="!isCollapsed(node)" class="{{ collapseIconClass }}"></span>
+                <span data-ng-if="isCollapsed(node)" class="{{ expandIconClass }}"></span>
+            </a><a data-ng-if="!node[childrenProperty] || node[childrenProperty].length <= 0" class="btn btn-xs btn-link text-center"><span class="{{ leafIconClass }}"></span></a>
+            <a class="btn btn-xs btn-link"
+               data-ng-click="select(node)"
+               data-ng-bind="getLabel({node:node})"></a>
+        </div>
+        <div data-ng-show="!isCollapsed(node)"
+             data-ng-include="'modules/gui/ExpandableTree.html'"
+             data-ng-init="childNode = node"
+             class="jg-tree jg-tree-animation"></div>
+    </li>
+</ul>

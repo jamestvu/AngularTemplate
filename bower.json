@@ -1,0 +1,43 @@
+{
+  "name": "template",
+  "version": "0.1",
+  "authors": [
+    "James Vu <jamesvu@eworldes.com>"
+  ],
+  "description": "Starting Point for Blank Angular Project",
+  "moduleType": [
+    "node"
+  ],
+  "license": "eWorldES",
+  "homepage": "https://bitbucket.org/eworldes/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.8",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.13.0",
+    "angular": "~1.4.0",
+    "angular-sanitize": "~1.4.7",
+    "font-awesome": "~4.4.0",
+    "angular-ui-grid": "~3.0.7",
+    "ui-select": "angular-ui-select#~0.13.2"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "resolutions": {
+    "angular": "~1.4.0",
+    "jquery": "~2.1.4"
+  }
+}

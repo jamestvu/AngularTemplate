@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h3 class="modal-title" style="word-wrap: break-word">{{ options.header }}</h3>
+</div>
+<div class="modal-body">
+    <h4 style="white-space: pre-line">{{ options.question }}</h4>
+    <h4>{{ options.message }}</h4>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-link pull-left" data-ng-click="cancel()" data-ng-if="!options.isCancelDisabled">{{ options.cancelText ? options.cancelText : 'Cancel'}}</button>
+    <span data-ng-if="operations.isLoading"
+          class="fa fa-spin fa-spinner"></span>
+    <button class="btn" data-ng-class="{ 'btn-success' : options.confirmation, 'btn-danger' : !options.confirmation}"
+            data-ng-disabled="isLoading"
+            data-ng-click="confirm()">{{ options.okText ? options.okText : 'Yes' }}</button>
+</div>
+

@@ -1,0 +1,89 @@
+<div data-ng-if="!isVerticalOrientation"
+     class="row">
+    <div class="col-xs-5">
+        <div class="form-group">
+            <label data-ng-bind="leftLabel"
+                   class="control-label"></label>
+            <select multiple
+                    data-ng-disabled="isDisabled"
+                    data-ng-model="selectedLeftList"
+                    data-ng-options="{{ labelExpression }} for option in (getUnusedObjects() | orderBy: {{order}}) track by option.id"
+                    class="form-control"
+                    data-ng-attr-size="{{ numVisibleInBox }}"></select>
+        </div>
+    </div>
+    <div class="col-xs-1 text-center" style="margin-top: 5em;">
+        <button class="btn btn-xs btn-block btn-success"
+                data-ng-click="moveToRight(selectedLeftList)"
+                data-ng-disabled="isDisabled"
+                style="margin-bottom: 1em;">
+            <span class="fa fa-arrow-right" data-ng-if="!isLoading"></span>
+            <span class="fa fa-spin fa-spinner" data-ng-if="isLoading"></span>
+        </button>
+        <button class="btn btn-xs btn-block btn-danger"
+                data-ng-click="moveToLeft(selectedRightList)"
+                data-ng-disabled="isDisabled">
+            <span class="fa fa-arrow-left" data-ng-if="!isLoading"></span>
+            <span class="fa fa-spin fa-spinner" data-ng-if="isLoading"></span>
+        </button>
+    </div>
+    <div class="col-xs-5">
+        <div class="form-group">
+            <label data-ng-bind="rightLabel"
+                   class="control-label"></label>
+            <select multiple
+                    data-ng-disabled="isDisabled"
+                    data-ng-model="selectedRightList"
+                    data-ng-options="{{ labelExpression }} for option in (rightList | orderBy:{{order}}) track by option.id"
+                    class="form-control"
+                    data-ng-attr-size="{{ numVisibleInBox }}"></select>
+        </div>
+    </div>
+</div>
+
+<div data-ng-if="isVerticalOrientation">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label data-ng-bind="leftLabel"
+                       class="control-label"></label>
+                <select multiple
+                        data-ng-disabled="isDisabled"
+                        data-ng-model="selectedLeftList"
+                        data-ng-options="{{ labelExpression }} for option in (getUnusedObjects() | orderBy: {{order}}) track by option.id"
+                        class="form-control"
+                        data-ng-attr-size="{{ numVisibleInBox }}"></select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <button class="btn btn-success"
+                    data-ng-click="moveToRight(selectedLeftList)"
+                    data-ng-disabled="isDisabled">
+                <span class="fa fa-arrow-down" data-ng-if="!isLoading"></span>
+                <span class="fa fa-spin fa-spinner" data-ng-if="isLoading"></span>
+            </button>
+            <button class="btn btn-danger"
+                    data-ng-click="moveToLeft(selectedRightList)"
+                    data-ng-disabled="isDisabled">
+                <span class="fa fa-arrow-up" data-ng-if="!isLoading"></span>
+                <span class="fa fa-spin fa-spinner" data-ng-if="isLoading"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label data-ng-bind="rightLabel"
+                       class="control-label"></label>
+                <select multiple
+                        data-ng-disabled="isDisabled"
+                        data-ng-model="selectedRightList"
+                        data-ng-options="{{ labelExpression }} for option in (rightList | orderBy:{{order}}) track by option.id"
+                        class="form-control"
+                        data-ng-attr-size="{{ numVisibleInBox }}"></select>
+            </div>
+        </div>
+    </div>
+</div>

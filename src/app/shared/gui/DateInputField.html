@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group has-feedback">
+            <label class="control-label input-field" data-ng-style="{width: labelWidth}">{{ label }}</label>
+            <input type="text" class="form-control input-field"
+                    data-show-button-bar="false"
+                    data-datepicker-popup="MMMM dd yyyy"
+                    data-ng-model="model"
+                    data-is-open="isOpen"
+                    data-min-date="config.minDate"
+                    data-max-date="config.maxDate"
+                    data-datepicker-options="config.datepickerOptions"
+                    data-ng-style="{width: inputWidth, 'margin-top': marginTop}"
+                    data-ng-disabled="disabled"
+                    value="{{model | date:'MM/dd/yyyy'}}"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" data-ng-style="{'margin-top': marginTop}" data-ng-click="open($event)" data-ng-disabled="disabled" data-ng-if="!disabled">
+                    <span class="fa fa-calendar"></span>
+                </button>
+            </span>
+        </div>
+    </div>
+    <!--<div class="col-xs-6">
+        <div style="padding-top: 1.2em;"></div>
+        <p class="help-block" style="height: 1em;"> {{ helpMessage }}</p>
+    </div>-->
+</div>

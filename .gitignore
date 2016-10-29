@@ -1,0 +1,15 @@
+node_modules/
+bower_components/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+/.apt_generated/
+/build/
+/bin/
+**/assets
+**/scripts
+**/styles
+**/favicon
+**/index.html
+**/favicon.ico

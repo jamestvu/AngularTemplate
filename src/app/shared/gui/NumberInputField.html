@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group has-feedback">
+            <label class="control-label input-label" data-ng-style="{width: labelWidth, 'margin-top': labelTop}">{{ label }}</label>
+            <input data-ng-hide="displayOnly" data-ng-disabled="disabled" data-ng-model="model.value" type="text" class="form-control input-textbox number-textbox" maxlength="{{maxLength}}"
+                   data-ng-blur="onFocusLost()" data-ng-style="{width: textboxWidth}" data-ng-class="{'has-error': model.hasError}" value="{{model.value}}">
+            <br data-ng-if="displayOnly" />
+            <span data-ng-if="displayOnly">{{ model.value }}</span>
+            <span class="form-control-feedback"></span>
+            <span class="help-block">{{ validationMessage }}</span>
+        </div>
+    </div>
+</div>
