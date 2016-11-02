@@ -7,7 +7,7 @@
 
             $scope.onFocusLost = function () {
                 $scope.onBlur();
-            }
+            };
         }
 
         return {

@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('template.page2Module', [])
+        .module('template.page2Module', []);
 })();

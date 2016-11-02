@@ -1,12 +1,12 @@
 (function() {
     function DateInputField() {
         function DateInputFieldController($scope) {
-            $scope.open = function(event) {
+            $scope.open = function (event) {
                 event.preventDefault();
                 event.stopPropagation();
 
                 $scope.isOpen = true;
-            }
+            };
         }
 
         return {
