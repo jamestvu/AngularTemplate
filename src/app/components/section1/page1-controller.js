@@ -7,8 +7,18 @@
 
     function page1Controller($scope, TestService) {
         $scope.callService = function () {
-            TestService.herp().then(function (data) {
-                alert(data.name);
+            TestService.herp().then(function (data, a) {
+                console.info('win');
+                console.info(data);
+            })
+            .catch(function (data) {
+                console.info('error');
+                console.info('ggeeeweeeee');
+                console.info(data);
+            })
+            .finally(function (data) {
+                console.info('gg');
+                console.info(data);
             });
         };
     }

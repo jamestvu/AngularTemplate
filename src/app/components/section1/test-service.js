@@ -11,6 +11,8 @@
                 return response.data;
             })
             .catch(function (data) {
+                console.info('woops');
+                console.info(data);
             });
         };
     }
