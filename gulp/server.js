@@ -33,7 +33,8 @@ function browserSyncInit(baseDir, browser) {
    *
    * For more details and option, https://github.com/chimurai/http-proxy-middleware/blob/v0.0.5/README.md
    */
-   server.middleware = proxyMiddleware('/rest', {target: 'http://localhost:9080/WS_URL_HERE', proxyHost: 'localhost'});
+    //server.middleware = proxyMiddleware('/rest', {target: 'http://localhost:9080/WS_URL_HERE', proxyHost: 'localhost'});
+   server.middleware = proxyMiddleware('/rest', {target: 'http://localhost:9080/RestTest/', proxyHost: 'localhost'});
 
   browserSync.instance = browserSync.init({
     startPath: '/',
