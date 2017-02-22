@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html ng-app="template">
+<head id="headerContent">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8">
+  <title>Angular Template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automatically insert here -->
+  <!-- endinject -->
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/template.css"/>
+
+  <!-- endbuild -->
+</head>
+<body>
+    <div class="container">
+        <div class="panel-body" ng-show="true">
+            <a ui-sref="splash">splash</a>
+            <a ui-sref="page1">Page 1</a>
+            <a ui-sref="page2">Page 2</a>
+            <div ui-view></div>
+            <span class="fa fa-circle-o"></span>
+          herp
+            <div ng-controller="tableController">
+                <p>click me!</p>
+            </div>
+        </div>
+        <div ng-show="false">
+            if this shows up angular not working or has compile errors
+        </div>
+    </div>
+<div id="bowerCode">
+<!-- build:js(src) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+
+<!-- endbuild -->
+
+<!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+</div>
+</body>
+</html>
